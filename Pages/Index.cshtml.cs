@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.ML;
 using Microsoft.ML;
 using ML_2025.Models;
+using ML_2025.Services;
 using System.IO;
 
 public class IndexModel : PageModel
@@ -56,6 +57,10 @@ public class IndexModel : PageModel
     {
         public string Input { get; set; }
         public bool Positivo { get; set; }
+    }
+    public void OnGet()
+    {
+        LogService.Registrar("Usuário", "Acessou página", "Index.cshtml", "127.0.0.1");
     }
 
 

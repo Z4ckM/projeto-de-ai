@@ -64,3 +64,4 @@ wwwroot\NovaPasta\PriceAI Logo Option 1.jpg
 wwwroot\NovaPasta\PriceAI Logo Option 1.png
 wwwroot\NovaPasta\whatsapp1.png
 wwwroot\ratings\ratings_.csv
+wwwroot\logs\logs.csv
