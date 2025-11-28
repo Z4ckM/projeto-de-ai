@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 
-// CONFIGURAR LOGSERVICE AQUI
 LogService.Configurar(builder.Environment.WebRootPath);
 
 LogService.Registrar("Sistema", "Inicialização", "Aplicação iniciada", "127.0.0.1");

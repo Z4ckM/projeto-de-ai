@@ -27,6 +27,7 @@ public class IndexModel : PageModel
         if (!string.IsNullOrWhiteSpace(InputText))
         {
             var input = new Produto { Text = InputText };
+
             PredictionResult = _predictionEngine.Predict(input);
         }
     }

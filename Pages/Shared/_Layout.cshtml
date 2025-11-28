@@ -15,15 +15,16 @@
 </head>
 <style>
     <style >
+    /*a partir daqui é o chat bot*/
    
-    * {
+     {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: poppins;
     }
 
-    /* Button used to open the chat form - fixed at the bottom right of the page */
+    
     .open-button {
         background-color: transparent;
         color: #5d17cf;
@@ -37,7 +38,7 @@
         transition: 0.3s;
     }
 
-    /* The popup chat which is hidden by default */
+    
     .chat-popup {
         display: none;
         position: fixed;
@@ -53,7 +54,7 @@
         border-radius: 8px;
     }
 
-    /* Chat messages area */
+    /* Chat messages */
     .chat-messages {
         max-height: 200px;
         overflow-y: auto;
@@ -78,7 +79,7 @@
             text-align: right;
         }
 
-    /* Enables full-width textarea */
+   
     .form-container textarea {
         width: 100%;
         padding: 15px;
@@ -90,13 +91,13 @@
         min-height: 90px;
     }
 
-        /* When the textarea gets focus, do something (changes color)*/
+       
         .form-container textarea:focus {
             background-color: #ddd;
             outline: none;
         }
 
-    /* Set a style for the submit/send button */
+
     .form-container .btn {
         background-color: #04aa6d;
         color: white;
@@ -110,12 +111,12 @@
         transition: 0.3s;
     }
 
-    /* Adds a red background color to the cancel button */
+    
     .form-container .cancel {
         background-color: red;
     }
 
-    /* Adds hover effects to all the buttons */
+ 
     .form-container .btn:hover, .open-button:hover {
         opacity: 1;
     }
@@ -133,7 +134,7 @@
     }
 
     .navbar {
-        background-color: #808080B3; /* B3 = 70% de opacidade */
+        background-color: #808080B3; 
     }
 
 
@@ -221,13 +222,13 @@
     </div>
      <script>
 
-        // Função para abrir o popup
+        
         function openForm(){
             document.getElementById("myForm").style.display = "block";
         document.getElementById("msg").focus(); 
         }
 
-        // Função para fechar o popup
+       
         function closeForm(){
             document.getElementById("myForm").style.display = "none";
         document.getElementById("msg").value = ""; 
@@ -240,28 +241,30 @@
         const messageText = messageInput.value.trim();
 
         if (messageText === "") {
-                return; // Não envia mensagens vazias
+                return; 
             }
-        // Adiciona a mensagem do usuário à área de chat
+        
         const chatMessages = document.getElementById("chatMessages");
         const newMessage = document.createElement("div");
         newMessage.className = "message user";
         newMessage.textContent = messageText;
         chatMessages.appendChild(newMessage);
 
-        // Limpa o textarea
+        
         messageInput.value = "";
 
-        // Rola para o final da área de mensagens
         chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            setTimeout(() => {
-                const botMessage = document.createElement("div");
-        botMessage.className = "message";
-        botMessage.textContent = "Mensagem recebida! (Resposta simulada do bot)";
-        chatMessages.appendChild(botMessage);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 500);
+                    setTimeout(() => {
+            const botMessage = document.createElement("div");
+            botMessage.className = "message";
+
+            botMessage.textContent = responderBot(messageText);
+
+            chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 600);
+
         });
     </script>
 

@@ -1,5 +1,4 @@
 wwwroot\css\site.css
-wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -64,4 +63,5 @@ wwwroot\NovaPasta\PriceAI Logo Option 1.jpg
 wwwroot\NovaPasta\PriceAI Logo Option 1.png
 wwwroot\NovaPasta\whatsapp1.png
 wwwroot\ratings\ratings_.csv
+wwwroot\js\site.js
 wwwroot\logs\logs.csv

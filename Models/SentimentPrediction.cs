@@ -9,8 +9,7 @@ namespace ML_2025.Models
         public float Preco { get; set; }
         public int Desconto { get; set; }
 
-        public float PrecoFinal => Preco - (Preco * Desconto / 100f); // float
+        public float PrecoFinal => Preco - (Preco * Desconto / 100f);
         public string MelhorOferta => $"{Nome} por R$ {PrecoFinal:F2} na loja {Loja}";
     }
-
 }
